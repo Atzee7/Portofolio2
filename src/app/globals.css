@@ -239,8 +239,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .collaboration-section h2 { max-width: 410px; font-size: 27px; }
   .button { min-width: 0; min-height: 42px; padding: 0 16px; }
   .button-outline { min-width: 0; }
-  .content-toolbar { position: fixed; top: 16px; right: 16px; width: 42px; height: 42px; margin: 0; }
-  .content-toolbar .theme-toggle { position: static; width: 42px; min-width: 42px; min-height: 42px; background: var(--panel); box-shadow: 0 4px 14px #0002; }
+  .content-toolbar { position: fixed; z-index: 30; inset: 0 0 auto; width: auto; height: 58px; justify-content: space-between; margin: 0; padding: 0 16px 0 24px; transition: background .2s ease, border-color .2s ease; }
+  .content-toolbar.has-active-title { border-bottom: 1px solid var(--line); background: var(--page); }
+  .mobile-section-title { overflow: hidden; color: var(--text-strong); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity .18s ease; }
+  .content-toolbar.has-active-title .mobile-section-title { opacity: 1; visibility: visible; }
+  .content-toolbar .theme-toggle { position: static; width: 42px; min-width: 42px; min-height: 42px; flex: 0 0 42px; background: var(--panel); box-shadow: 0 4px 14px #0002; }
   .content-section { padding: 20px 0 37px; }
   .section-heading h2 { font-size: 18px; }
   .projects-grid { grid-template-columns: 1fr; }

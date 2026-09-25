@@ -4,7 +4,7 @@ import { Footer } from "@/components/sections/footer";
 import { ProfileSection } from "@/components/sections/profile-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { TechStackSection } from "@/components/sections/tech-stack-section";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { SectionScrollToolbar } from "@/components/ui/section-scroll-toolbar";
 
 export default function Home() {
   return (
@@ -12,9 +12,7 @@ export default function Home() {
       <ProfileSection />
       <div className="content-pane" id="content-scroll">
         <div className="content-inner">
-          <div className="content-toolbar">
-            <ThemeToggle />
-          </div>
+          <SectionScrollToolbar />
           <CollaborationSection />
           <ExperienceSection />
           <TechStackSection />
