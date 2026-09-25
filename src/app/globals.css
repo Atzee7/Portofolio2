@@ -189,6 +189,30 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .site-footer p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.4; }
 .footer-copyright { color: var(--footer-ink) !important; }
 
+@keyframes portfolio-entrance {
+  from { opacity: 0; transform: translate3d(0, 16px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .profile-sidebar .sidebar-main > *, .sidebar-social, .content-toolbar, .collaboration-section > div, #experience, #stack, #projects, .site-footer {
+    animation: portfolio-entrance 680ms cubic-bezier(.16, 1, .3, 1) both;
+  }
+  .profile-sidebar .sidebar-main > :nth-child(2) { animation-delay: 90ms; }
+  .profile-sidebar .sidebar-main > :nth-child(3) { animation-delay: 170ms; }
+  .profile-sidebar .sidebar-main > :nth-child(4) { animation-delay: 230ms; }
+  .profile-sidebar .sidebar-main > :nth-child(5) { animation-delay: 290ms; }
+  .profile-sidebar .sidebar-main > :nth-child(6) { animation-delay: 370ms; }
+  .sidebar-social { animation-delay: 440ms; }
+  .content-toolbar { animation-delay: 80ms; }
+  .collaboration-section > div:first-child { animation-delay: 150ms; }
+  .collaboration-section > div:last-child { animation-delay: 250ms; }
+  #experience { animation-delay: 340ms; }
+  #stack { animation-delay: 470ms; }
+  #projects { animation-delay: 600ms; }
+  .site-footer { animation-delay: 700ms; }
+}
+
 @media (min-width: 1500px) {
   .portfolio-layout { width: min(1320px, 100%); grid-template-columns: minmax(360px, 440px) minmax(0, 700px); justify-content: center; }
   .profile-sidebar { padding-top: clamp(72px, 8vh, 80px); }
@@ -257,5 +281,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
