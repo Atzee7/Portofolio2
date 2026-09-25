@@ -26,7 +26,7 @@ export function TechLogo({ name }: { name: string }) {
     return <span className="tech-logo blade-logo" aria-hidden="true">B</span>;
   }
 
-  const color = name === "GitHub" ? "#f4f4f5" : `#${icon.hex}`;
+  const color = name === "GitHub" ? "var(--ink)" : `#${icon.hex}`;
 
   return (
     <svg className="tech-logo" viewBox="0 0 24 24" aria-hidden="true">
