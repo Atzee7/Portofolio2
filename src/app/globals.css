@@ -7,7 +7,7 @@
   --panel-hover: #242427;
   --ink: #f4f4f5;
   --muted: #9b9ba4;
-  --soft: #73737d;
+  --soft: #888892;
   --line: #34343a;
   --accent: #8ec8e8;
   --border-subtle: #29292e;
@@ -222,9 +222,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 @media (min-width: 641px) and (max-width: 1023px) {
-  .portfolio-layout { width: min(100%, 760px); display: block; padding: 0 34px; }
+  .portfolio-layout { width: 100%; display: block; padding: 0 30px; }
   .profile-sidebar { position: relative; top: auto; height: auto; min-height: 0; overflow: visible; padding: 38px 0 25px; border-bottom: 1px solid var(--line); }
-  .profile-visual { width: 150px; margin-bottom: 17px; }
+  .profile-visual { width: 160px; margin-bottom: 17px; }
   .profile-sidebar h1 { font-size: 48px; }
   .profile-description { max-width: 580px; margin-top: 12px; }
   .sidebar-social { margin-top: 22px; }
