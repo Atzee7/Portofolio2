@@ -224,19 +224,45 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (min-width: 641px) and (max-width: 1023px) {
   .portfolio-layout { width: 100%; display: block; padding: 0 30px; }
   .profile-sidebar { position: relative; top: auto; height: auto; min-height: 0; overflow: visible; padding: 38px 0 25px; border-bottom: 1px solid var(--line); }
-  .profile-visual { width: 160px; margin-bottom: 17px; }
-  .profile-sidebar h1 { font-size: 48px; }
-  .profile-description { max-width: 580px; margin-top: 12px; }
-  .sidebar-social { margin-top: 22px; }
+  .sidebar-main { max-width: none; }
+  .profile-visual { width: clamp(144px, 18vw, 176px); margin-bottom: 19px; }
+  .profile-sidebar h1 { font-size: clamp(38px, 4.9vw, 48px); }
+  .profile-name-break { display: none; }
+  .profile-role { margin-top: 19px; font-size: 18px; }
+  .profile-location { font-size: 17px; }
+  .profile-description { max-width: none; margin-top: 14px; font-size: clamp(15px, 1.6vw, 16px); line-height: 1.65; }
+  .profile-certifications { margin-top: 22px; }
+  .profile-certifications h2 { font-size: 14px; }
+  .certification-empty { font-size: 12px; }
+  .sidebar-social { margin-top: 24px; }
+  .social-links a { font-size: 14px; }
   .content-pane { height: auto; overflow: visible; overscroll-behavior: auto; }
   .content-inner { padding: 34px 0 30px; }
   .content-toolbar { position: fixed; top: 16px; right: 16px; width: 42px; height: 42px; margin: 0; }
   .content-toolbar .theme-toggle { position: static; width: 42px; min-width: 42px; min-height: 42px; background: var(--panel); box-shadow: 0 4px 14px #0002; }
-  .collaboration-section { gap: 17px; padding-bottom: 34px; }
-  .collaboration-section h2 { max-width: 650px; font-size: clamp(29px, 4vw, 36px); }
-  .experience-item { grid-template-columns: 48px minmax(0, 1fr) auto; gap: 12px; }
+  .collaboration-section { gap: 19px; padding-bottom: 38px; }
+  .collaboration-section h2 { max-width: none; font-size: clamp(32px, 4.4vw, 40px); }
+  .collaboration-actions .button { min-height: 48px; font-size: 15px; }
+  .content-section { padding-top: 22px; padding-bottom: 45px; }
+  .section-heading { margin-bottom: 19px; }
+  .section-heading h2 { font-size: clamp(20px, 2.35vw, 23px); }
+  .section-heading > p { font-size: 14px; }
+  .experience-item { min-height: 92px; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 14px; padding: 16px 20px; }
+  .experience-marker { width: 40px; height: 40px; }
+  .experience-main h3 { font-size: 18px; }
+  .experience-main p, .experience-main a, .experience-period { font-size: 14px; }
   .experience-period { grid-column: auto; margin-top: 0; }
-  .project-image { height: 185px; }
+  .tech-grid { gap: 14px; }
+  .tech-category { padding: 17px 18px; }
+  .tech-category h3 { margin-bottom: 15px; font-size: 18px; }
+  .tech-items { gap: 9px; }
+  .tech-pill { gap: 9px; padding: 8px 11px; font-size: 13.5px; }
+  .tech-logo { width: 18px; height: 18px; flex-basis: 18px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-image { height: 200px; }
+  .project-info h3 { font-size: 16px; }
+  .project-info > p { font-size: 12px; }
+  .project-tags span, .project-links a { font-size: 11px; }
 }
 
 @media (min-width: 1024px) and (max-height: 680px) {

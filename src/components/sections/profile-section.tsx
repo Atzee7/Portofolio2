@@ -10,15 +10,16 @@ export function ProfileSection() {
           <div className="portrait-frame">
             <Image
               className="portrait-image"
-              src="/images/profile.jpg"
+              src="/images/profile.webp"
               alt="Foto Muhammad Yusril Islam"
               fill
-              sizes="(max-width: 640px) 118px, (max-width: 1023px) 150px, 190px"
+              sizes="(max-width: 640px) 118px, (max-width: 1023px) 176px, 190px"
+              unoptimized
               fetchPriority="high"
             />
           </div>
         </div>
-        <h1 id="profile-title">Muhammad<br />Yusril Islam</h1>
+        <h1 id="profile-title">Muhammad{" "}<br className="profile-name-break" />Yusril Islam</h1>
         <p className="profile-role">Front-End Web Developer</p>
         <p className="profile-location">Malang, Indonesia</p>
         <p className="profile-description">Fresh graduate in Informatics with an interest in front-end web development. I enjoy building responsive, thoughtful, and user-friendly web experiences.</p>
